@@ -1,15 +1,27 @@
+html, body
+  height: 100%
+
 body
-  font-family: 'Open Sans', sans-serif
+
+$orange: #E79D2D
+
 h1
-  font-size: 1.6em
   font-weight: bold
   text-align: center
-  margin-bottom: 1em
+  margin-bottom: 1.5em
+  font-family: 'Lato'
+  font-size: 2.5em
 
 section
-  padding: 3em
-  &.gray
-    background: #f7f7f7
+  padding: 6rem
+  &.blue
+    background: #1A5881
+    h1
+      color: white
+    h3
+      color: $orange
+    p
+      color: #A2B5C0
 
 header
   padding: 1.5em 0 1.5em 0
@@ -17,35 +29,75 @@ header
 
 p
   line-height: 1.6em
+  font-family: 'Helvetica Neue'
 
 h3
   margin-top: .3em
-  margin-bottom: 3em
   text-align: center
+  font-family: 'Lato'
+  letter-spacing: .05em
+  font-size: 1.5em
+  font-weight: bold
 
-
-header
-  li
-    margin-right: 2.5em
-    font-size: 1em
-    &:last-child
-      margin-right: 0
-  a
-    text-decoration: none
-    color: black
 
 #intro
+  padding: 0
+  padding-top: 10%
+  box-sizing: border-box
+  height: 100%
+  h1
+    margin-bottom: .2em
+    letter-spacing: .03em
+    font-size: 3.3em
+    &.logo
+      margin-bottom: 1em
+      font-weight: 300
+      font-size: 5em
+      font-family: 'Helvetica Neue'
   p
     padding-bottom: 2em
     width: 60%
     text-align: center
     margin: 0 auto
+      top: 4em
+  h3
+    margin-bottom: 0
+
+#different
+  overflow: auto
+  h3
+    padding: .2em 0 .3em
+  p
+    text-align: center
+  img
+
+    max-height: 100px
+    display: block
+    margin: 0 auto
+
+#testimonials
+  text-align: center
+  h2
+    font-size: 1.2em
+    margin-top: .5em
+    font-weight: bold
+  p
+    margin-top: .3em
+  img
+    width: 100%
+  .small-box
+    margin-top: 4em
 
 #services
+  h3
+    font-size: 1.2em
   li
+    &:nth-child(-n+4)
+      margin-bottom: 3em
     img
       margin: 0 auto
       display: block
+      padding-bottom: .3em
 
 #contact
   .info

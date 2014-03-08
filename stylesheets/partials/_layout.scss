@@ -27,30 +27,26 @@ section {
       float: right;
     }
   }
-}
 
-header {
-  .content {
-    @include container;
-    .logo {
-      @include span-columns(4,12);
-    }
-
-    nav {
-      @include span-columns(8 omega,12);
-      ul {
-        float: right;
-      }
-    }
-
-    li {
-      float: left;
-    }
+  .big-box {
+    @include span-columns(6, 12);
+    @include prefix(3);
   }
-}
+  .small-box {
+    @include span-columns(5,12);
+    @include nth-omega(2n);
+    // &:nth-child(1n) {
+    //   @include prefix(1);
+    // }
+    // &:nth-child(2n) {
+    //   @include suffix(1);
+    // }
+  }
 
+}
 
   #services ul li {
     @include span-columns(3,12);
     @include nth-omega(4n);
   }
+

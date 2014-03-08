@@ -7,7 +7,7 @@
   <title></title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/screen.css">
 
   <script src="//cdn.jsdelivr.net/g/jquery@1.11.0,modernizr@2.7.1"></script>
@@ -21,5 +21,17 @@
 
 
   <script src="js/scripts.js"></script>
+  <script>
+    var c=0, words=['Big Box Retailers','Local Government','VA Administration','Property Managers','Home Owner Associations','Home Builders'];
+
+
+    function loop(){
+      $('h1.words').delay(1300).fadeTo(300,0,function(){
+         $(this).text( words[++c%words.length]).fadeTo(300,1,loop);
+      });
+    }
+
+    loop();
+  </script>  
 </body>
 </html>

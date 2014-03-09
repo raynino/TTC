@@ -2,7 +2,6 @@ $total-columns: 4; // Switching total columns from 10 to 4.
 $column-width: 4rem;
 $gutter-width: 1rem;
 $grid-padding: 0;
-
 $med: 8;
 $large: 12;
 
@@ -13,16 +12,16 @@ section {
     // Inserting media layouts into container tells Susy that we have 3 different grids that we want to use at different sizes, and Susy should output them as requested when the at-breakpoint mixin is called. 
     // Feel free to comment out all Susy grid backgrounds if you don't need them. 
 
-    @include susy-grid-background;
+    // @include susy-grid-background;
     // Everything without a at-breakpoint mixin will show up with $total-columns layout. 
 
     @include at-breakpoint($med) {
-      @include susy-grid-background;
+      // @include susy-grid-background;
       // Switching up susy grid background when layout changes
     }
 
     @include at-breakpoint($large) {
-      @include susy-grid-background;
+      // @include susy-grid-background;
       // Switching up susy grid background when layout changes
     }
   }

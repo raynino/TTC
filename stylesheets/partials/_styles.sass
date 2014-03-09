@@ -31,7 +31,7 @@ header
 
 p
   line-height: 1.6em
-  font-family: 'Helvetica Neue'
+  font-family: 'Open Sans', sans-serif
 
 h3
   margin-top: .3em
@@ -55,7 +55,7 @@ h3
       font-weight: 300
       color: $blue
       font-size: 3em
-      font-family: 'Helvetica Neue'
+      font-family: 'Open Sans', sans-serif
       @include at-breakpoint($med)
         font-size: 4em
       @include at-breakpoint($large)
@@ -151,7 +151,7 @@ h3
   p
     margin-bottom: 1em
     &:last-child
-      margin-bottom: 0    
+      margin-bottom: 0        
 
 #contact
   .info
@@ -160,3 +160,41 @@ h3
       display: block
       clear: both
       margin-bottom: .75em
+  input
+    border-radius: 3px
+    border: none
+    display: block
+    margin: 0 auto
+    font-size: 1em
+    padding: .6em
+    margin-bottom: 1.3em
+    &:focus
+      outline: none
+  textarea
+    border: none
+    border-radius: 3px
+    display: block
+    margin: 0 auto
+    font-size: 1em
+    line-height: 1.4em
+    padding: .6em
+    min-height: 5em  
+    &:focus
+      outline: none      
+  p
+    font-size: 1.5em
+    line-height: 1.4em
+  span
+    clear: both
+    display: block
+    font-size: .8em
+    color: white
+    &.author
+      font-weight: bold
+      color: $orange
+      margin-top: .8em
+      font-size: 1em
+    &.title
+      margin-top: .3em
+      color: #A2B5C0
+      line-height: 1.3em

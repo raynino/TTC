@@ -41,43 +41,89 @@ section {
     }
   }  
 
-  .left {
+  &#partner {
+    .left {
+      
+      img {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+        @include at-breakpoint($med) {
+          width: 50%;
+          margin-bottom: 0;
+        }
+        @include at-breakpoint($large) {
+          width: 70%;
+          margin-bottom: 0;
+          margin-top: 1.5em;
+        }
+      }
+
+      @include at-breakpoint($large) {    
+        @include span-columns(6, 12);
+      }
+
     
-    img {
-      width: 80%;
-      margin: 0 auto;
-      margin-bottom: 2em;
-      @include at-breakpoint($med) {
+    }
+
+    .right {
+
+      text-align: center;
+
+      @include at-breakpoint($large) {    
+        @include span-columns(6 omega, 12);
+        text-align: left;
+      }
+
+    }
+  }
+
+
+  &#contact {
+
+    input, textarea {
+      width: 100%;
+    }
+
+    @include at-breakpoint($med) {
+      input, textarea {
         width: 50%;
-        margin-bottom: 0;
-      }
-      @include at-breakpoint($large) {
-        width: 70%;
-        margin-bottom: 0;
-        margin-top: 1.5em;
       }
     }
 
-    @include at-breakpoint($large) {    
-      @include span-columns(6, 12);
+    .right {
+      text-align: center;
     }
 
-  
-  }
+      .left {
+        @include span-columns(8 omega,8);
+      }
+      .right {
+        @include span-columns(8 omega, 8);
+        margin-top: 3em;
+      }
 
-  .right {
 
-    text-align: center;
+    @include at-breakpoint($large) {
+      .left {
+        @include span-columns(4,12);
+        @include prefix(1);
+        @include suffix(1);
+        input, textarea {
+          width: 100%;
+          }
+          }
+      .right {
+        @include span-columns(6 omega,12);
+        text-align: center;
+      }
 
-    @include at-breakpoint($large) {    
-      @include span-columns(6 omega, 12);
-      text-align: left;
+      }  
     }
-
   }
+
 
   .big-box {
-
     @include at-breakpoint($large) {
       @include span-columns(6, 12);
       @include prefix(3);
@@ -95,8 +141,6 @@ section {
     //   @include suffix(1);
     // }
   }
-
-}
 
   #services ul li {
 

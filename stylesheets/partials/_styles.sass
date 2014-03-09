@@ -4,12 +4,14 @@ html, body
 
 $orange: #E79D2D
 $blue: #1A5881
+$darkblue: darken(#1A5881,15%)
 
 h1
   font-weight: bold
   text-align: center
   margin-bottom: 1.5em
   font-family: 'Lato'
+  color: $darkblue
   font-size: 2.5em
 
 section
@@ -61,7 +63,7 @@ h3
 
 
     &.tagline
-      color: black
+      color: $darkblue
 
     &.words
       color: $orange
@@ -73,10 +75,32 @@ h3
     @include at-breakpoint($large)
       font-size: 3.3em  
 
+  .scrollto
+    position: absolute
+    width: 100px
+    left: 50%
+    bottom: 20px
+    margin-left: -50px
+    font-size: 1em
+    font-weight: 600
+    color: #484745
+    text-align: center
+    font-family: 'Open Sans', sans-serif
+    text-decoration: none
+    &:after
+      content: ''
+      display: block
+      position: relative
+      margin: 5px auto 0
+      width: 34px
+      height: 18px
+      background-image: url("../images/scroll.png") 
+
   p
     padding-bottom: 2em
     width: 100%
     text-align: center
+    color: $darkblue
     font-size: 1em
     @include at-breakpoint($large)
       font-size: 1.2em    
@@ -121,6 +145,10 @@ h3
       width: 100%
       padding-bottom: .3em
 
+#partner
+  img
+    display: block
+    
 
 #contact
   .info

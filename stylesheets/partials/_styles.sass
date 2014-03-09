@@ -4,6 +4,7 @@ html, body
 body
 
 $orange: #E79D2D
+$blue: #1A5881
 
 h1
   font-weight: bold
@@ -13,7 +14,7 @@ h1
   font-size: 2.5em
 
 section
-  padding: 6rem
+  padding: 6rem 0
   &.blue
     background: #1A5881
     h1
@@ -54,10 +55,13 @@ h3
       font-weight: 300
       font-size: 5em
       font-family: 'Helvetica Neue'
+    &.tagline
+      color: $blue
   p
     padding-bottom: 2em
     width: 60%
     text-align: center
+    font-size: 1.2em
     margin: 0 auto
       top: 4em
   h3
@@ -92,11 +96,10 @@ h3
   h3
     font-size: 1.2em
   li
-    &:nth-child(-n+4)
-      margin-bottom: 3em
     img
       margin: 0 auto
       display: block
+      width: 100%
       padding-bottom: .3em
 
 #contact

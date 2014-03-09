@@ -1,15 +1,42 @@
-$total-columns  : 12;             // a 12-column grid
-$column-width   : 4em;            // each column is 4em wide
-$gutter-width   : 1em;            // 1em gutters between columns
-$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$total-columns: 4; // Switching total columns from 10 to 4. 
+$column-width: 4rem;
+$gutter-width: 1rem;
+$grid-padding: 0;
+
+$med: 8;
+$large: 12;
+
 
 section {
   .content {
-    @include container;
+    @include container($total-columns, $med, $large);
+    // Inserting media layouts into container tells Susy that we have 3 different grids that we want to use at different sizes, and Susy should output them as requested when the at-breakpoint mixin is called. 
+    // Feel free to comment out all Susy grid backgrounds if you don't need them. 
+
+    @include susy-grid-background;
+    // Everything without a at-breakpoint mixin will show up with $total-columns layout. 
+
+    @include at-breakpoint($med) {
+      @include susy-grid-background;
+      // Switching up susy grid background when layout changes
+    }
+
+    @include at-breakpoint($large) {
+      @include susy-grid-background;
+      // Switching up susy grid background when layout changes
+    }
   }
+  
   .box {
-    @include span-columns(4,12);
-    @include nth-omega(3n);
+    @include span-columns(4 omega,4);
+    margin-bottom: 4em;
+
+    @include at-breakpoint($large) {
+
+      @include span-columns(4,12);
+      @include nth-omega(3n);
+
+    }
   }  
 
   .left {
@@ -29,12 +56,17 @@ section {
   }
 
   .big-box {
-    @include span-columns(6, 12);
-    @include prefix(3);
+
+    @include at-breakpoint($large) {
+      @include span-columns(6, 12);
+      @include prefix(3);
+    }
   }
   .small-box {
-    @include span-columns(5,12);
-    @include nth-omega(2n);
+    @include at-breakpoint($large) {
+      @include span-columns(5,12);
+      @include nth-omega(2n);
+    }
     // &:nth-child(1n) {
     //   @include prefix(1);
     // }
@@ -46,7 +78,22 @@ section {
 }
 
   #services ul li {
-    @include span-columns(3,12);
-    @include nth-omega(4n);
-  }
+    @include span-columns(2,4);
+    @include nth-omega(2n);
+    &:nth-child(-n+4) {
+      margin-bottom: 4em;
+    }
 
+
+    @include at-breakpoint($large) {
+      @include span-columns(3,12);
+      @include nth-omega(4n);
+      &:nth-child(-n+4) {
+        margin-bottom: 3em      
+      }      
+      img {
+        width: 150px;
+      }
+    }
+
+  }

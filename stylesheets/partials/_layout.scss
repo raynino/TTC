@@ -30,9 +30,12 @@ section {
   .box {
     @include span-columns(4 omega,4);
     margin-bottom: 4em;
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include at-breakpoint($large) {
-
+      margin-bottom: 0;
       @include span-columns(4,12);
       @include nth-omega(3n);
 
@@ -40,19 +43,28 @@ section {
   }  
 
   .left {
-    @include span-columns(6, 12);
+    
     img {
-      display: block;
-      float: left;
+      width: 100%;
+      margin-bottom: 1.5em;
     }
+
+    @include at-breakpoint($large) {    
+      @include span-columns(6, 12);
+    }
+
+  
   }
 
   .right {
-    @include span-columns(6 omega, 12);
-    img {
-      display: block;      
-      float: right;
+
+    text-align: center;
+
+    @include at-breakpoint($large) {    
+      @include span-columns(6 omega, 12);
+      text-align: left;
     }
+
   }
 
   .big-box {
@@ -78,19 +90,23 @@ section {
 }
 
   #services ul li {
+
     @include span-columns(2,4);
     @include nth-omega(2n);
-    &:nth-child(-n+4) {
-      margin-bottom: 4em;
+    &:nth-child(-n+6) {
+      margin-bottom: 3em;
     }
 
 
     @include at-breakpoint($large) {
       @include span-columns(3,12);
       @include nth-omega(4n);
+      margin-bottom: 0;
+
       &:nth-child(-n+4) {
         margin-bottom: 3em      
-      }      
+      }
+
       img {
         width: 150px;
       }

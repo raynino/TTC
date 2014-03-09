@@ -115,11 +115,14 @@ section .left img {
 @media (min-width: 39em) {
   section .left img {
     width: 50%;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 59em) {
   section .left img {
     width: 70%;
+    margin-bottom: 0;
+    margin-top: 1.5em;
   }
 }
 @media (min-width: 59em) {
@@ -372,6 +375,12 @@ h3 {
 
 #partner img {
   display: block;
+}
+#partner p {
+  margin-bottom: 1em;
+}
+#partner p:last-child {
+  margin-bottom: 0;
 }
 
 #contact .info {

@@ -241,6 +241,24 @@ section#contact .right {
   }
 }
 
+#footer {
+  text-align: center;
+}
+@media (min-width: 59em) {
+  #footer .left {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    text-align: left;
+  }
+  #footer .right {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+    text-align: right;
+  }
+}
+
 html, body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
@@ -269,6 +287,9 @@ section.blue h3 {
 }
 section.blue p {
   color: #a2b5c0;
+}
+section#footer {
+  padding: 2rem;
 }
 
 header {
@@ -484,4 +505,25 @@ h3 {
   margin-top: 0.3em;
   color: #a2b5c0;
   line-height: 1.3em;
+}
+#contact input[type=submit] {
+  margin-top: 1em;
+  background: #e79d2d;
+  color: white;
+  cursor: pointer;
+}
+#contact input[type=submit]:hover {
+  background: #e1921a;
+  color: #e6e6e6;
+}
+
+ul.social li {
+  float: right;
+  margin-right: 1em;
+  margin-top: 1.6em;
+  text-align: right;
+}
+ul.social li a {
+  text-decoration: none;
+  color: black;
 }

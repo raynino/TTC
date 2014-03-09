@@ -166,3 +166,18 @@ section {
     }
 
   }
+
+
+#footer {
+  text-align: center;
+  @include at-breakpoint($large) {
+    .left {
+      @include span-columns(6,12);
+      text-align: left;
+    }    
+    .right {
+      @include span-columns(6 omega,12);
+      text-align: right;
+    }
+  }
+}

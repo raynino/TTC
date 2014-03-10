@@ -144,6 +144,10 @@ section {
 
   #services ul li {
 
+    img {
+      height: 115px;
+    }
+
     @include span-columns(2,4);
     @include nth-omega(2n);
     &:nth-child(-n+6) {

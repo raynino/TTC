@@ -215,6 +215,9 @@ section#contact .right {
   margin-right: 5.26316%;
   display: inline;
 }
+#services ul li img {
+  height: 115px;
+}
 #services ul li:nth-child(2n) {
   float: right;
   margin-right: 0;

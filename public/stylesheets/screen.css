@@ -519,17 +519,22 @@ h3 {
   color: #e6e6e6;
 }
 
-ul.social li {
+#footer .left img {
+  width: 85px;
+  float: left;
+  margin-right: 1em;
+}
+#footer ul.social li {
   float: right;
   margin-right: 1em;
   margin-top: 1.6em;
   height: 32px;
   width: 32px;
 }
-ul.social li:first-child {
+#footer ul.social li:first-child {
   margin-right: 0;
 }
-ul.social li a {
+#footer ul.social li a {
   display: block;
   text-decoration: none;
   color: black;
@@ -538,15 +543,15 @@ ul.social li a {
   height: 32px;
   width: 32px;
 }
-ul.social li.twitter {
+#footer ul.social li.twitter {
   background: url(../images/social/twitter.png) no-repeat;
 }
-ul.social li.facebook {
+#footer ul.social li.facebook {
   background: url(../images/social/facebook.png) no-repeat;
 }
-ul.social li.google {
+#footer ul.social li.google {
   background: url(../images/social/google.png) no-repeat;
 }
-ul.social li.linkedin {
+#footer ul.social li.linkedin {
   background: url(../images/social/linkedin.png) no-repeat;
 }

@@ -217,7 +217,24 @@ ul.social
     float: right
     margin-right: 1em
     margin-top: 1.6em
-    text-align: right
+    height: 32px
+    width: 32px
+    &:first-child
+      margin-right: 0
     a
+      display: block
       text-decoration: none
       color: black
+      text-indent: -9999px
+      text-align: left
+      height: 32px
+      width: 32px
+    &.twitter
+      background: url(../images/social/twitter.png) no-repeat
+    &.facebook
+      background: url(../images/social/facebook.png) no-repeat
+    &.google
+      background: url(../images/social/google.png) no-repeat
+    &.linkedin
+      background: url(../images/social/linkedin.png) no-repeat
+

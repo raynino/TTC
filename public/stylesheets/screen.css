@@ -57,7 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-section .content {
+section .content, header .content {
   *zoom: 1;
   max-width: 304px;
   max-width: 19rem;
@@ -67,24 +67,24 @@ section .content {
   margin-left: auto;
   margin-right: auto;
 }
-section .content:after {
+section .content:after, header .content:after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 39em) {
-  section .content {
+  section .content, header .content {
     max-width: 624px;
     max-width: 39rem;
   }
 }
 @media (min-width: 59em) {
-  section .content {
+  section .content, header .content {
     max-width: 944px;
     max-width: 59rem;
   }
 }
-section .box {
+section .box, header .box {
   width: 100%;
   float: right;
   margin-right: 0;
@@ -92,76 +92,76 @@ section .box {
   display: inline;
   margin-bottom: 4em;
 }
-section .box:last-child {
+section .box:last-child, header .box:last-child {
   margin-bottom: 0;
 }
 @media (min-width: 59em) {
-  section .box {
+  section .box, header .box {
     margin-bottom: 0;
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
-  section .box:nth-child(3n) {
+  section .box:nth-child(3n), header .box:nth-child(3n) {
     float: right;
     margin-right: 0;
   }
 }
-section#partner .left img {
+section#partner .left img, header#partner .left img {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 2em;
 }
 @media (min-width: 39em) {
-  section#partner .left img {
+  section#partner .left img, header#partner .left img {
     width: 50%;
     margin-bottom: 0;
   }
 }
 @media (min-width: 59em) {
-  section#partner .left img {
+  section#partner .left img, header#partner .left img {
     width: 70%;
     margin-bottom: 0;
     margin-top: 1.5em;
   }
 }
 @media (min-width: 59em) {
-  section#partner .left {
+  section#partner .left, header#partner .left {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
 }
-section#partner .right {
+section#partner .right, header#partner .right {
   text-align: center;
 }
 @media (min-width: 59em) {
-  section#partner .right {
+  section#partner .right, header#partner .right {
     width: 49.15254%;
     float: right;
     margin-right: 0;
     text-align: left;
   }
 }
-section#contact input, section#contact textarea {
+section#contact input, section#contact textarea, header#contact input, header#contact textarea {
   width: 100%;
 }
 @media (min-width: 39em) {
-  section#contact input, section#contact textarea {
+  section#contact input, section#contact textarea, header#contact input, header#contact textarea {
     width: 50%;
   }
 }
-section#contact .right {
+section#contact .right, header#contact .right {
   text-align: center;
 }
-section#contact .left {
+section#contact .left, header#contact .left {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1rem;
   display: inline;
 }
-section#contact .right {
+section#contact .right, header#contact .right {
   width: 100%;
   float: right;
   margin-right: 0;
@@ -170,17 +170,17 @@ section#contact .right {
   margin-top: 3em;
 }
 @media (min-width: 59em) {
-  section#contact .left {
+  section#contact .left, header#contact .left {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
     padding-left: 8.47458%;
     padding-right: 8.47458%;
   }
-  section#contact .left input, section#contact .left textarea {
+  section#contact .left input, section#contact .left textarea, header#contact .left input, header#contact .left textarea {
     width: 100%;
   }
-  section#contact .right {
+  section#contact .right, header#contact .right {
     width: 49.15254%;
     float: right;
     margin-right: 0;
@@ -262,6 +262,20 @@ section#contact .right {
   }
 }
 
+header .left {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+header .right {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1rem;
+  display: inline;
+}
+
 html, body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
@@ -296,8 +310,36 @@ section#footer {
 }
 
 header {
-  padding: 1.5em 0 1.5em 0;
-  background: #efefef;
+  padding: 1em 0 1em 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: none;
+}
+@media (min-width: 39em) {
+  header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+  }
+}
+header .call-to {
+  float: right;
+  background: #e79d2d;
+  cursor: pointer;
+  color: white;
+  padding: 0.7em;
+  border-radius: 0.4em;
+  text-decoration: none;
+}
+header .call-to:hover {
+  background: #ca8317;
+}
+header .logo {
+  display: block;
+  height: 38px;
+}
+header .logo img {
+  height: 100%;
 }
 
 p {
@@ -321,7 +363,7 @@ h3 {
 
 #intro {
   padding: 0;
-  padding-top: 10%;
+  padding-top: 15%;
   box-sizing: border-box;
   height: 100%;
 }

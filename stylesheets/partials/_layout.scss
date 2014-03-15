@@ -6,7 +6,7 @@ $med: 8;
 $large: 12;
 
 
-section {
+section, header {
   .content {
     @include container($total-columns, $med, $large);
     // Inserting media layouts into container tells Susy that we have 3 different grids that we want to use at different sizes, and Susy should output them as requested when the at-breakpoint mixin is called. 
@@ -40,6 +40,8 @@ section {
 
     }
   }  
+
+
 
   &#partner {
     .left {
@@ -197,4 +199,14 @@ section {
       text-align: right;
     }
   }
+}
+
+
+header {
+  .left {
+    @include span-columns(6,12);
+  }
+  .right {
+    @include span-columns(6 omega, 12);
+  }  
 }

@@ -52,7 +52,7 @@ section, header {
         margin-bottom: 2em;
         @include at-breakpoint($med) {
           width: 50%;
-          margin-bottom: 0;
+          margin-bottom: 2em;
         }
         @include at-breakpoint($large) {
           width: 70%;
@@ -189,6 +189,23 @@ section, header {
 
 #footer {
   text-align: center;
+  .right {
+    @include span-columns(4,4);
+    ul {
+      display: inline-block;
+    }
+  }
+  @include at-breakpoint($med) {
+    .left {
+      @include span-columns(4,8);
+      p {
+        text-align: left;
+      }
+    }
+    .right {
+      @include span-columns(4 omega,8);
+    }
+  }
   @include at-breakpoint($large) {
     .left {
       @include span-columns(6,12);

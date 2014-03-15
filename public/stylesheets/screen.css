@@ -115,7 +115,7 @@ section#partner .left img, header#partner .left img {
 @media (min-width: 39em) {
   section#partner .left img, header#partner .left img {
     width: 50%;
-    margin-bottom: 0;
+    margin-bottom: 2em;
   }
 }
 @media (min-width: 59em) {
@@ -246,6 +246,30 @@ section#contact .right, header#contact .right {
 
 #footer {
   text-align: center;
+}
+#footer .right {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  display: inline;
+}
+#footer .right ul {
+  display: inline-block;
+}
+@media (min-width: 39em) {
+  #footer .left {
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+  #footer .left p {
+    text-align: left;
+  }
+  #footer .right {
+    width: 48.71795%;
+    float: right;
+    margin-right: 0;
+  }
 }
 @media (min-width: 59em) {
   #footer .left {
@@ -574,9 +598,24 @@ h3 {
 }
 
 #footer .left img {
-  width: 85px;
-  float: left;
-  margin-right: 1em;
+  width: 65px;
+}
+@media (min-width: 39em) {
+  #footer .left img {
+    width: 75px;
+    float: left;
+    margin-right: 0.8em;
+  }
+  #footer .left p {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 59em) {
+  #footer .left img {
+    width: 85px;
+    float: left;
+    margin-right: 1em;
+  }
 }
 #footer ul.social li {
   float: right;

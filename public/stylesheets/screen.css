@@ -430,6 +430,10 @@ h3 {
 }
 #testimonials p {
   margin-top: 0.3em;
+  font-size: 1em;
+}
+#testimonials p.quote {
+  font-size: 0.9em;
 }
 #testimonials p b {
   font-weight: bold;

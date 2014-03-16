@@ -197,13 +197,13 @@ section, header {
   }
   @include at-breakpoint($med) {
     .left {
-      @include span-columns(4,8);
+      @include span-columns(8,8);
       p {
-        text-align: left;
+        text-align: center;
       }
     }
     .right {
-      @include span-columns(4 omega,8);
+      @include span-columns(8,8);
     }
   }
   @include at-breakpoint($large) {

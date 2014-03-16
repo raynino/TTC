@@ -239,26 +239,43 @@ h3
       color: darken(#ffffff, 10%)
 
 #footer
+  a
+    color: $blue
   .left
     img
-      width: 65px
+      width: 85px
+      margin-bottom: 1em
+    p
+      font-size: 1em
+      &:last-child
+        margin-bottom: 1em
+
     @include at-breakpoint($med)
       img
         width: 75px
-        float: left
         margin-right: .8em
-      p
-        font-size: .9em
     @include at-breakpoint($large)
       img
-        width: 85px
+        width: 109px
         float: left
         margin-right: 1em
+      p
+        margin-top: .275em
+        text-align: left
+
+
+  .right
+    @include at-breakpoint($large)
+      p
+        font-size: .9em
+
+
+
   ul.social
     li
       float: right
       margin-right: 1em
-      margin-top: 1.6em
+      margin-top: .6em
       height: 32px
       width: 32px
       &:first-child

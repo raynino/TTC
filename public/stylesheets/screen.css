@@ -258,17 +258,17 @@ section#contact .right, header#contact .right {
 }
 @media (min-width: 39em) {
   #footer .left {
-    width: 48.71795%;
+    width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
   #footer .left p {
-    text-align: left;
+    text-align: center;
   }
   #footer .right {
-    width: 48.71795%;
-    float: right;
-    margin-right: 0;
+    width: 100%;
+    float: left;
+    margin-right: 2.5641%;
   }
 }
 @media (min-width: 59em) {
@@ -597,30 +597,45 @@ h3 {
   color: #e6e6e6;
 }
 
+#footer a {
+  color: #1a5881;
+}
 #footer .left img {
-  width: 65px;
+  width: 85px;
+  margin-bottom: 1em;
+}
+#footer .left p {
+  font-size: 1em;
+}
+#footer .left p:last-child {
+  margin-bottom: 1em;
 }
 @media (min-width: 39em) {
   #footer .left img {
     width: 75px;
-    float: left;
     margin-right: 0.8em;
-  }
-  #footer .left p {
-    font-size: 0.9em;
   }
 }
 @media (min-width: 59em) {
   #footer .left img {
-    width: 85px;
+    width: 109px;
     float: left;
     margin-right: 1em;
+  }
+  #footer .left p {
+    margin-top: 0.275em;
+    text-align: left;
+  }
+}
+@media (min-width: 59em) {
+  #footer .right p {
+    font-size: 0.9em;
   }
 }
 #footer ul.social li {
   float: right;
   margin-right: 1em;
-  margin-top: 1.6em;
+  margin-top: 0.6em;
   height: 32px;
   width: 32px;
 }

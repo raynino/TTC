@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Revalia);
+@import url(http://fonts.googleapis.com/css?family=Krona+One);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -188,6 +190,22 @@ section#contact .right, header#contact .right {
   }
 }
 
+@media (min-width: 59em) {
+  #testimonials .big-box {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-bottom: 4em;
+  }
+  #testimonials .customer {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+#testimonials .row {
+  clear: both;
+}
 #testimonials .box {
   width: 100%;
   float: right;
@@ -305,6 +323,10 @@ html, body {
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background: url(../images/linen.png) repeat;
+}
+
 h1 {
   font-weight: bold;
   text-align: center;
@@ -387,7 +409,7 @@ h3 {
 
 #intro {
   padding: 0;
-  padding-top: 15%;
+  padding-top: 13%;
   box-sizing: border-box;
   height: 100%;
 }
@@ -398,11 +420,16 @@ h3 {
   line-height: 1.2em;
 }
 #intro h1.logo {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0;
   font-weight: 300;
   color: #1a5881;
-  font-size: 3em;
-  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  font-family: "Krona One", sans-serif;
+}
+#intro h1.logo b {
+  font-family: "Revalia", cursive;
+  font-size: 1.3em;
 }
 @media (min-width: 39em) {
   #intro h1.logo {
@@ -411,7 +438,7 @@ h3 {
 }
 @media (min-width: 59em) {
   #intro h1.logo {
-    font-size: 5em;
+    font-size: 4em;
   }
 }
 #intro h1.tagline {
@@ -459,7 +486,7 @@ h3 {
   color: #0d2d41;
   font-size: 1em;
   margin: 0 auto;
-  margin-top: 4em;
+  margin-top: 2em;
 }
 @media (min-width: 59em) {
   #intro p {
@@ -506,6 +533,9 @@ h3 {
 }
 #testimonials img {
   height: 100px;
+}
+#testimonials .fans img {
+  height: 275px;
 }
 #testimonials .small-box {
   margin-top: 4em;
@@ -581,6 +611,13 @@ h3 {
   margin-top: 0.8em;
   font-size: 1em;
 }
+#contact span.author a {
+  color: #e79d2d;
+  text-decoration: none;
+}
+#contact span.author a:hover {
+  text-decoration: underline;
+}
 #contact span.title {
   margin-top: 0.3em;
   color: #a2b5c0;
@@ -597,52 +634,65 @@ h3 {
   color: #e6e6e6;
 }
 
-#footer a {
+section#footer {
+  padding: 1rem;
+}
+section#footer a {
   color: #1a5881;
 }
-#footer .left img {
+section#footer .left img {
   width: 85px;
   margin-bottom: 1em;
 }
-#footer .left p {
+section#footer .left p {
   font-size: 1em;
 }
-#footer .left p:last-child {
+section#footer .left p:last-child {
   margin-bottom: 1em;
 }
 @media (min-width: 39em) {
-  #footer .left img {
+  section#footer .left img {
     width: 75px;
     margin-right: 0.8em;
   }
 }
 @media (min-width: 59em) {
-  #footer .left img {
-    width: 109px;
+  section#footer .left img {
+    width: 90px;
     float: left;
     margin-right: 1em;
+    margin-bottom: 0;
   }
-  #footer .left p {
-    margin-top: 0.275em;
+  section#footer .left p {
     text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.4em;
+  }
+  section#footer .left p.margin {
+    margin-top: 0.3em;
+  }
+  section#footer .left p:last-child {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 59em) {
-  #footer .right p {
+  section#footer .right p {
     font-size: 0.9em;
+    line-height: 1.2em;
   }
 }
-#footer ul.social li {
+section#footer ul.social li {
   float: right;
   margin-right: 1em;
-  margin-top: 0.6em;
+  margin-top: 0.3em;
   height: 32px;
   width: 32px;
 }
-#footer ul.social li:first-child {
+section#footer ul.social li:first-child {
   margin-right: 0;
 }
-#footer ul.social li a {
+section#footer ul.social li a {
   display: block;
   text-decoration: none;
   color: black;
@@ -651,15 +701,15 @@ h3 {
   height: 32px;
   width: 32px;
 }
-#footer ul.social li.twitter {
+section#footer ul.social li.twitter {
   background: url(../images/social/twitter.png) no-repeat;
 }
-#footer ul.social li.facebook {
+section#footer ul.social li.facebook {
   background: url(../images/social/facebook.png) no-repeat;
 }
-#footer ul.social li.google {
+section#footer ul.social li.google {
   background: url(../images/social/google.png) no-repeat;
 }
-#footer ul.social li.linkedin {
+section#footer ul.social li.linkedin {
   background: url(../images/social/linkedin.png) no-repeat;
 }

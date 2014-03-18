@@ -25,6 +25,7 @@ section, header {
       // Switching up susy grid background when layout changes
     }
   }
+
   
   .box {
     @include span-columns(4 omega,4);
@@ -40,7 +41,6 @@ section, header {
 
     }
   }  
-
 
 
   &#partner {
@@ -124,30 +124,27 @@ section, header {
     }
   }
 
-
-  // .big-box {
-  //   @include at-breakpoint($large) {
-  //     @include span-columns(6, 12);
-  //     @include prefix(3);
-  //   }
-  // }
-  // .small-box {
-  //   @include at-breakpoint($large) {
-  //     @include span-columns(5,12);
-  //     @include nth-omega(2n);
-  //   }
-  //   // &:nth-child(1n) {
-  //   //   @include prefix(1);
-  //   // }
-  //   // &:nth-child(2n) {
-  //   //   @include suffix(1);
-  //   // }
-  // }
-
   #testimonials {
+
+    @include at-breakpoint($large) {
+      .big-box {
+        @include span-columns(6,12);
+        margin-bottom: 4em;
+      }
+
+      .customer {
+        @include span-columns(6 omega, 12);      
+      }      
+    }
+
+    .row {
+      clear: both;
+    }
+
     .box {
       @include span-columns(4 omega,4);
       margin-bottom: 4em;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -156,7 +153,6 @@ section, header {
         margin-bottom: 0;
         @include span-columns(4,12);
         @include nth-omega(3n);
-
       }
     }
   }

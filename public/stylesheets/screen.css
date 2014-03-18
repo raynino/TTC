@@ -433,7 +433,7 @@ h3 {
 }
 @media (min-width: 39em) {
   #intro h1.logo {
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 @media (min-width: 59em) {

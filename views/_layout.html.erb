@@ -40,9 +40,9 @@
         setInterval(function() {
           $('.client-type', 'section#testimonials').removeClass('active');
           quotes.hide();
-          current = $(quotes[++count%quotes.length]).fadeTo(300, 1);
+          current = $(quotes[++count%quotes.length]).fadeTo(1000, 1);
           $(current.data('client-type'), 'section#testimonials').addClass('active');
-        }, 3500);
+        }, 4000);
       })(jQuery);
 
      }    

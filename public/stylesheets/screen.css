@@ -193,15 +193,18 @@ section#contact .right, header#contact .right {
 @media (min-width: 59em) {
   #testimonials .big-box {
     width: 49.15254%;
-    float: left;
-    margin-right: 1.69492%;
+    float: right;
+    margin-right: 0;
     margin-bottom: 4em;
   }
   #testimonials .customer {
     width: 49.15254%;
-    float: right;
-    margin-right: 0;
+    float: left;
+    margin-right: 1.69492%;
   }
+}
+#testimonials .big-box {
+  margin-bottom: 4em;
 }
 #testimonials .row {
   clear: both;
@@ -531,14 +534,75 @@ h3 {
 #testimonials p b {
   font-weight: bold;
 }
-#testimonials img {
-  height: 100px;
+#testimonials .fans {
+  padding-top: 10px !important;
 }
 #testimonials .fans img {
   height: 275px;
 }
 #testimonials .small-box {
   margin-top: 4em;
+}
+#testimonials ul {
+  display: none;
+  margin-top: 3em;
+}
+#testimonials ul li {
+  display: none;
+  padding: 1em;
+  background: #e79d2d;
+  border-radius: 5px;
+}
+#testimonials ul li h3 {
+  color: #85560f;
+}
+#testimonials ul li p {
+  color: white;
+}
+#testimonials ul li.active {
+  display: list-item;
+}
+@media (min-width: 59em) {
+  #testimonials ul {
+    display: block;
+  }
+}
+#testimonials .box, #testimonials .big-box {
+  padding-top: 110px;
+  background-position: top center;
+  background-size: auto 100px;
+  background-repeat: no-repeat;
+}
+#testimonials .box.hoa, #testimonials .big-box.hoa {
+  background-image: url(../images/hoa.png);
+}
+#testimonials .box.government, #testimonials .big-box.government {
+  background-image: url(../images/government.png);
+}
+@media (min-width: 59em) {
+  #testimonials .box.hoa, #testimonials .big-box.hoa {
+    background-image: url(../images/hoa-gray.png);
+  }
+  #testimonials .box.hoa.active, #testimonials .big-box.hoa.active {
+    background-image: url(../images/hoa.png);
+  }
+  #testimonials .box.government, #testimonials .big-box.government {
+    background-image: url(../images/government-gray.png);
+  }
+  #testimonials .box.government.active, #testimonials .big-box.government.active {
+    background-image: url(../images/government.png);
+  }
+}
+#testimonials .big-box {
+  background-image: url(../images/lowes.png);
+}
+@media (min-width: 59em) {
+  #testimonials .big-box {
+    background-image: url(../images/lowes-gray.png);
+  }
+  #testimonials .big-box.active {
+    background-image: url(../images/lowes.png);
+  }
 }
 
 #services h3 {

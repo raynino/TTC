@@ -167,13 +167,60 @@ h3
       font-size: .9em
     b
       font-weight: bold
-  img
-    height: 100px
   .fans
+    padding-top: 10px !important
     img
       height: 275px
   .small-box
     margin-top: 4em
+
+
+  ul
+    display: none
+    margin-top: 3em
+    li
+      display: none
+      padding: 1em
+      background: $orange
+      border-radius: 5px
+      h3
+        color: darken($orange, 25%)
+      p 
+        color: white
+
+      &.active
+        display: list-item
+    @include at-breakpoint($large)
+      display: block
+
+  .box, .big-box
+    padding-top: 110px
+    background-position: top center
+    background-size: auto 100px
+    background-repeat: no-repeat
+    &.hoa
+      background-image: url(../images/hoa.png)
+    &.government
+      background-image: url(../images/government.png)
+    @include at-breakpoint($large)
+      &.hoa
+        background-image: url(../images/hoa-gray.png)
+        &.active
+          background-image: url(../images/hoa.png)
+      &.government
+        background-image: url(../images/government-gray.png)
+        &.active
+          background-image: url(../images/government.png)
+    
+  .big-box
+    background-image: url(../images/lowes.png)
+
+  @include at-breakpoint($large)
+    .big-box
+      background-image: url(../images/lowes-gray.png)
+      &.active
+        background-image: url(../images/lowes.png)
+
 
 #services
   h3

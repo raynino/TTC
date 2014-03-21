@@ -168,16 +168,20 @@ h3
     b
       font-weight: bold
   .fans
+    display: none
     padding-top: 10px !important
     img
       height: 275px
+    @include at-breakpoint($large)      
+      display: block
   .small-box
     margin-top: 4em
 
 
   ul
-    display: none
+    // display: none
     margin-top: 3em
+    margin-bottom: 4em
     li
       display: none
       padding: 1em
@@ -266,6 +270,7 @@ h3
     box-sizing: border-box    
     line-height: 1.4em
     padding: .6em
+    
     min-height: 5em  
     &:focus
       outline: none      

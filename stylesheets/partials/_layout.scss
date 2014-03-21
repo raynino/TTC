@@ -127,13 +127,14 @@ section, header {
   #testimonials {
 
     @include at-breakpoint($large) {
-      .big-box {
+      .customer {
         @include span-columns(6 omega,12);
         margin-bottom: 4em;
       }
 
-      .customer {
-        @include span-columns(6, 12);      
+      .big-box {
+        @include span-columns(5, 12);      
+        @include post(1);
       }      
     }
 

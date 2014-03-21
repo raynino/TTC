@@ -191,16 +191,17 @@ section#contact .right, header#contact .right {
 }
 
 @media (min-width: 59em) {
-  #testimonials .big-box {
+  #testimonials .customer {
     width: 49.15254%;
     float: right;
     margin-right: 0;
     margin-bottom: 4em;
   }
-  #testimonials .customer {
-    width: 49.15254%;
+  #testimonials .big-box {
+    width: 40.67797%;
     float: left;
     margin-right: 1.69492%;
+    margin-right: 8.47458%;
   }
 }
 #testimonials .big-box {
@@ -535,17 +536,23 @@ h3 {
   font-weight: bold;
 }
 #testimonials .fans {
+  display: none;
   padding-top: 10px !important;
 }
 #testimonials .fans img {
   height: 275px;
 }
+@media (min-width: 59em) {
+  #testimonials .fans {
+    display: block;
+  }
+}
 #testimonials .small-box {
   margin-top: 4em;
 }
 #testimonials ul {
-  display: none;
   margin-top: 3em;
+  margin-bottom: 4em;
 }
 #testimonials ul li {
   display: none;
